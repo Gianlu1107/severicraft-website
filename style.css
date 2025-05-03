@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .coming-soon {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #111;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  /* animazione di entrata */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
