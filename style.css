@@ -19,18 +19,87 @@ body {
     color: #111;
     letter-spacing: 8px;
     text-transform: uppercase;
-    animation: fadeInUp 1.5s ease-out;
+    position: relative;
+    animation: glitch 1s infinite;
   }
   
-  /* animazione di entrata */
-  @keyframes fadeInUp {
+  .coming-soon::before,
+  .coming-soon::after {
+    content: 'COMING SOON';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    color: #f0f;
+    z-index: -1;
+    clip: rect(0, 0, 0, 0);
+  }
+  
+  .coming-soon::before {
+    color: #0ff;
+    animation: glitchTop 2s infinite linear alternate-reverse;
+  }
+  
+  .coming-soon::after {
+    color: #f00;
+    animation: glitchBottom 2s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch {
     0% {
-      opacity: 0;
-      transform: translateY(30px);
+      transform: none;
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    40% {
+      transform: translate(-2px, 2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(-2px, -2px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+      transform: none;
+    }
+  }
+  
+  @keyframes glitchTop {
+    0% {
+      clip: rect(0, 9999px, 0, 0);
+    }
+    10% {
+      clip: rect(10px, 9999px, 30px, 0);
+      transform: translate(-2px, -2px);
+    }
+    20% {
+      clip: rect(5px, 9999px, 25px, 0);
+      transform: translate(2px, 2px);
+    }
+    100% {
+      clip: rect(0, 9999px, 0, 0);
+      transform: none;
+    }
+  }
+  
+  @keyframes glitchBottom {
+    0% {
+      clip: rect(0, 9999px, 0, 0);
+    }
+    10% {
+      clip: rect(35px, 9999px, 60px, 0);
+      transform: translate(2px, 2px);
+    }
+    20% {
+      clip: rect(40px, 9999px, 70px, 0);
+      transform: translate(-2px, -2px);
+    }
+    100% {
+      clip: rect(0, 9999px, 0, 0);
+      transform: none;
     }
   }
   
