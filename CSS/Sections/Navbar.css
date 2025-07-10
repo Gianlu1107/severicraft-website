@@ -96,7 +96,7 @@
 	}
 
 	.nav-mobile-title {
-		font-family: 'Poppins';
+		font-family: 'Poppins', sans-serif;
 		padding: 5px 15px;
 		justify-content: space-between;
 		text-transform: uppercase;
@@ -142,7 +142,7 @@
 
 	.nav-mobile-menu a,
 	.nav-mobile-especial a {
-		font-family: 'Poppins';
+		font-family: 'Poppins', sans-serif;
 		color: var(--secondary-tc);
 		text-decoration: none;
 		padding: 15px 0px;
