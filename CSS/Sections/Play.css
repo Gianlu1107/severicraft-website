@@ -67,8 +67,8 @@
 }
 
 .btn-sucess {
-	color: var(--sucess-button-tc);
-	background-color: var(--theme-green-dark); /* Pulsante verde scuro */
+	color: var(--theme-green-dark); /* Testo verde scuro come il bordo */
+	background-color: var(--secondary-tc); /* Sfondo chiaro per contrasto */
 	border-color: var(--theme-green-dark);
 }
 
