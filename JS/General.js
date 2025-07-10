@@ -11,7 +11,7 @@ navbars.addEventListener('click', () => {
 });
 
 // =====================
-//     MAIN NAV ITEM
+//     LOGO NAV PRINCIPALE
 // =====================
 
 const navinicial = document.querySelector('.nav-logo');

@@ -1,12 +1,12 @@
 // ==================
-//      COPY IP
+//      COPIA IP
 // ==================
 
 const copyBtn = document.getElementById("copy-btn");
 
 copyBtn.addEventListener("click", function(event) {
 	event.preventDefault();
-	var ip = "mc.severicraft.it"; // Add your server's IP here
+	var ip = "mc.severicraft.it"; // Inserisci qui l'IP del tuo server
 	navigator.clipboard.writeText(ip).then(() => {
 		var popup = document.getElementById("play-copy-alert");
 		
@@ -44,7 +44,7 @@ newsItems.forEach(item => {
 });
 
 // ================
-//     CAROUSEL
+//     CAROSELLO
 // ================
 
 const radioInputs = document.querySelectorAll(".radio-input");
