@@ -7,7 +7,7 @@
 	justify-content: space-between;
 	padding: 20px 40px;
 	border-bottom: 2px solid white;
-	font-family: 'Panton', sans-serif !important;
+	font-family: 'Poppins', sans-serif !important;
 	background-color: var(--secondary-bc);
 }
 
@@ -96,7 +96,7 @@
 	}
 
 	.nav-mobile-title {
-		font-family: 'Panton';
+		font-family: 'Poppins';
 		padding: 5px 15px;
 		justify-content: space-between;
 		text-transform: uppercase;
@@ -142,7 +142,7 @@
 
 	.nav-mobile-menu a,
 	.nav-mobile-especial a {
-		font-family: 'Panton';
+		font-family: 'Poppins';
 		color: var(--secondary-tc);
 		text-decoration: none;
 		padding: 15px 0px;

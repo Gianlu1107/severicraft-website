@@ -11,7 +11,7 @@
 }
 
 .cart h1 {
-	font-family: 'Panton';
+	font-family: 'Poppins', sans-serif;
 	font-size: 90px;
 	text-transform: uppercase;
 	color: var(--primary-tc);
