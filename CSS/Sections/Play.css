@@ -14,7 +14,7 @@
 	padding: 40px 50px;
 	border-radius: 10px;
 	background-color: var(--theme-green); /* Contenitore verde */
-	border: 3px solid white;
+	border: 3px solid var(--theme-green-dark); /* Bordo verde scuro */
 	justify-content: space-between;
 	box-shadow: 0px 5px 0px #ffffff;
 }
@@ -64,6 +64,12 @@
 .play-copy-alert.show {
 	opacity: 1;
 	display: block;
+}
+
+.btn-sucess {
+	color: var(--sucess-button-tc);
+	background-color: var(--theme-green-dark); /* Pulsante verde scuro */
+	border-color: var(--theme-green-dark);
 }
 
 @media screen and (min-width: 320px) and (max-width: 999px) {

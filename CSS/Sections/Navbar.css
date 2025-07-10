@@ -78,7 +78,8 @@
 }
 
 .btn-login {
-	background-color: var(--primary-button-bc);
+	background-color: var(--theme-green-dark);
+	border-color: var(--theme-green-dark);
 }
 
 .btn-sucess {
