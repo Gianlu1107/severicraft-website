@@ -54,7 +54,7 @@
 }
 
 .login button:hover {
-    background-color: #30729e;
+    background-color: var(--theme-green-dark);
 }
 
 .login a {
