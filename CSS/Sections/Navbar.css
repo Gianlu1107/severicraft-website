@@ -8,7 +8,7 @@
 	padding: 20px 40px;
 	border-bottom: 2px solid white;
 	font-family: 'Poppins', sans-serif !important;
-	background-color: var(--secondary-bc);
+	background-color: var(--theme-green);
 }
 
 .nav-list a {
@@ -92,7 +92,7 @@
 
 	.nav-mobile {
 		color: var(--secondary-tc);
-		background-color: var(--secondary-bc);
+		background-color: var(--theme-green);
 	}
 
 	.nav-mobile-title {
