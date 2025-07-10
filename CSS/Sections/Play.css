@@ -67,9 +67,9 @@
 }
 
 .btn-sucess {
-	color: var(--theme-green-dark); /* Testo verde scuro come il bordo */
-	background-color: var(--secondary-tc); /* Sfondo chiaro per contrasto */
-	border-color: var(--theme-green-dark);
+	color: var(--sucess-button-tc);
+	background-color: var(--theme-green-dark); /* Sfondo verde scuro */
+	border-color: var(--theme-green-dark);      /* Bordo verde scuro */
 }
 
 @media screen and (min-width: 320px) and (max-width: 999px) {
