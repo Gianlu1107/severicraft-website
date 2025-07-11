@@ -4,10 +4,58 @@
     <meta charset="UTF-8">
     <title>SeveriCraft - Registrazione</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/Base.css">
     <link rel="stylesheet" href="../CSS/Pages/Forms.css">
+    <link rel="stylesheet" href="../CSS/Sections/Play.css">
+    <link rel="stylesheet" href="../CSS/Sections/Footer.css">
+    <link rel="stylesheet" href="../CSS/Sections/Navbar.css">
+    <link rel="stylesheet" href="../CSS/Classes/Framework.css">
 </head>
 <body>
+    <!--=== Navigation Bar ===-->
+    <nav class="nav">
+        <div class="nav-logo flex">
+            <img src="../Images/logo.png" alt="Logo server SeveriCraft" width="70px" height="70px">
+            <h1>SeveriCraft</h1> 
+        </div>
+        <div class="nav-list flex nav-list-centered">
+            <a class="nav-item-1" href="../HTML/Index.html"><span>Home</span></a> 
+            <a class="nav-item-3" href="../HTML/Rules.html"><span>Regole</span></a>
+            <a class="nav-item-5" href="https://vote.severicraft.it"><span>Vota</span></a>
+            <a class="nav-item-4" href="https://Discord.com"><span>Discord</span></a> 
+        </div>
+        <div class="flex">
+            <a href="../HTML/Login.html" class="nav-btn btn-login flex">
+                <img src="../Images/login.webp" alt="Icona Login" width="20px" height="20px">
+                <span>Accedi</span>
+            </a>
+        </div>
+    </nav>
+
+    <!--=== Navbar for mobile ===-->
+    <section class="nav-mobile">
+        <div class="nav-mobile-title flex">
+            <div class="navbars-bars">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+            </div>
+            <div class="navbars-title flex">
+                <img src="../Images/logo.png" alt="Logo server SeveriCraft" width="30px" height="30px">
+                <h1>SeveriCraft</h1>
+            </div>
+        </div>
+        <div class="nav-mobile-menu flex" style="justify-content: center;">
+            <a href="../HTML/Index.html"><span>Home</span></a> 
+            <a href="../HTML/Rules.html"><span>Regole</span></a>
+            <a href="https://vote.severicraft.it"><span>Vota</span></a>
+            <a href="https://discord.com"><span>Discord</span></a> 
+            <a href="../HTML/Login.html"><span>Accedi</span></a>
+        </div>
+    </section>
+
+    <!--=== Register Section ===-->
     <section class="login">
         <form id="register-form">
             <div class="login-form-content">
@@ -30,6 +78,20 @@
             </div>
         </form>
     </section>
+
+    <!--=== Footer Section ===-->
+    <footer class="footer">
+        <div class="footer-container flex" style="align-items: center; justify-content: space-between;">
+            <div class="footer-items" style="position: absolute; left: 50%; transform: translateX(-50%); text-align: center;">
+                <span class="sp-1">©2025 SeveriCraft | Tutti i diritti riservati.</span>
+                <span class="sp-2">Minecraft è un marchio di Mojang e SeveriCraft non è affiliato o approvato da Mojang.</span>
+            </div>
+            <div class="footer-socials flex" style="justify-content: flex-end; min-width: 100px; gap: 10px;">
+                <a href="https://discord.com" title="discord"><img class="discord-social" src="../Images/discord.webp" alt="logo discord" width="40px" height="40px"></a>
+                <a href="https://youtube.com" title="youtube"><img class="yt-social" src="../Images/youtube.webp" alt="logo youtube" width="40px" height="40px"></a>
+            </div>
+        </div>
+    </footer>
     <script>
     document.getElementById('register-form').addEventListener('submit', async function(event) {
         event.preventDefault();
