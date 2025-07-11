@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>SeveriCraft - Registrazione</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Base.css">
+    <link rel="stylesheet" href="../CSS/Pages/Forms.css">
+</head>
+<body>
+    <section class="login">
+        <form id="register-form">
+            <div class="login-form-content">
+                <h2>Registrati</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Inserisci la tua email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Scegli una password" required>
+
+                <label for="minecraft_nick">Minecraft Nick:</label>
+                <input type="text" id="minecraft_nick" placeholder="Il tuo nickname Minecraft" required>
+
+                <button type="submit">Registrati</button>
+                <div id="register-error" style="color: red; margin-top: 10px; display: none;"></div>
+                <div id="register-success" style="color: green; margin-top: 10px; display: none;"></div>
+                <div style="margin-top: 15px;">
+                    <a href="Login.html">Hai già un account? Accedi</a>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script>
+    document.getElementById('register-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const minecraft_nick = document.getElementById('minecraft_nick').value.trim();
+
+        const errorDiv = document.getElementById('register-error');
+        const successDiv = document.getElementById('register-success');
+        errorDiv.style.display = 'none';
+        successDiv.style.display = 'none';
+
+        try {
+            const response = await fetch('https://API_URL/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password, minecraft_nick })
+            });
+            if (!response.ok) {
+                errorDiv.textContent = 'Registrazione fallita. Controlla i dati.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            const data = await response.json();
+            if (data.success) {
+                successDiv.textContent = 'Registrazione avvenuta con successo! Ora puoi accedere.';
+                successDiv.style.display = 'block';
+            } else {
+                errorDiv.textContent = 'Errore durante la registrazione.';
+                errorDiv.style.display = 'block';
+            }
+        } catch (e) {
+            errorDiv.textContent = 'Errore di connessione.';
+            errorDiv.style.display = 'block';
+        }
+    });
+    </script>
+</body>
+</html>
