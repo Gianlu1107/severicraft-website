@@ -2,7 +2,12 @@
     function getJwtPayload(token) {
         try {
             const payload = token.split('.')[1];
-            return JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')));
+            // Base64 decode (handle padding)
+            const base64 = payload.replace(/-/g, '+').replace(/_/g, '/');
+            const json = decodeURIComponent(atob(base64).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            return JSON.parse(json);
         } catch (e) {
             return {};
         }
@@ -26,22 +31,23 @@
         popup.style.right = '40px';
         popup.style.background = '#fff';
         popup.style.border = '2px solid #44521e';
-        popup.style.borderRadius = '8px';
-        popup.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
-        popup.style.padding = '20px';
+        popup.style.borderRadius = '10px';
+        popup.style.boxShadow = '0 8px 32px rgba(0,0,0,0.18)';
+        popup.style.padding = '24px 28px';
         popup.style.zIndex = '9999';
         popup.style.display = 'none';
-        popup.style.minWidth = '220px';
+        popup.style.minWidth = '240px';
+        popup.style.color = '#222';
         popup.innerHTML = `
-            <div style="margin-bottom:10px;">
-                <strong>Email:</strong><br>
-                <span>${email}</span>
+            <div style="margin-bottom:16px;">
+                <strong style="color:#222;">Email:</strong><br>
+                <span style="color:#222;">${email}</span>
             </div>
-            <div style="margin-bottom:10px;">
-                <strong>Minecraft Nick:</strong><br>
-                <span>${minecraft_nick}</span>
+            <div style="margin-bottom:16px;">
+                <strong style="color:#222;">Minecraft Nick:</strong><br>
+                <span style="color:#222;">${minecraft_nick}</span>
             </div>
-            <button id="profile-stats-btn" style="background:#44521e;color:#fff;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;">Stats</button>
+            <button id="profile-stats-btn" style="background:#44521e;color:#fff;border:none;padding:10px 22px;border-radius:6px;cursor:pointer;font-size:16px;">Stats</button>
         `;
 
         document.body.appendChild(popup);
