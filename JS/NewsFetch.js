@@ -2,9 +2,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const container = document.querySelector('.news-containers');
     if (!container) return;
 
-    // Helper for cycling classes
-    const newsClasses = ['news-primary', 'news-alert', 'news-secondary'];
-
     try {
         const response = await fetch('https://api.severicraft.it/news');
         const newsList = await response.json();
@@ -17,37 +14,44 @@ document.addEventListener('DOMContentLoaded', async () => {
                 dateStr = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth()+1).padStart(2, '0')}/${d.getFullYear()}`;
             }
 
-            // Cycle classes
-            const newsClass = newsClasses[idx % newsClasses.length];
-
             // Create markup
             const newsContainer = document.createElement('div');
-            newsContainer.className = `news-container ${newsClass}`;
-            newsContainer.style.background = '#f4f4f4';
+            newsContainer.className = 'news-container';
+            newsContainer.style.background = '#44521e';
             newsContainer.style.color = '#222';
+            newsContainer.style.cursor = 'pointer';
+            newsContainer.style.transition = 'background 0.25s';
 
             newsContainer.innerHTML = `
                 <div class="news-item">
                     <div class="news-item-title flex">
                         <img src="" alt="">
                         <div class="news-title-text">
-                            <h1>${news.title || ''}</h1>
-                            <span>• ${dateStr}</span>
+                            <h1 style="color:#222;">${news.title || ''}</h1>
+                            <span style="color:#222;">• ${dateStr}</span>
                         </div>
                     </div>
-                    <div class="news-item-content">
-                        <p class="news-item-content-description">${news.text || ''}</p>
+                    <div class="news-item-content" style="display:none;transition:all .25s;">
+                        <p class="news-item-content-description" style="color:#222;">${news.text || ''}</p>
                     </div>
                 </div>
             `;
 
+            // Toggle logic
+            newsContainer.addEventListener('click', function() {
+                const content = newsContainer.querySelector('.news-item-content');
+                if (content.style.display === 'none' || !content.style.display) {
+                    content.style.display = 'block';
+                    content.style.height = 'auto';
+                } else {
+                    content.style.display = 'none';
+                    content.style.height = '0';
+                }
+            });
+
             container.appendChild(newsContainer);
         });
-
-        // Re-apply accordion logic if needed
-        if (window.newsAccordionInit) window.newsAccordionInit();
     } catch (e) {
-        // Optionally show error or fallback
         container.innerHTML = '<div style="padding:30px;text-align:center;color:#c00;">Impossibile caricare le news.</div>';
     }
 });
