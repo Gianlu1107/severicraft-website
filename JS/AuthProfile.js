@@ -74,11 +74,17 @@
     function setupProfileUI() {
         const token = localStorage.getItem('jwt_token');
         const loginBtn = document.querySelector('.btn-login');
+        const mobileLoginBtn = document.getElementById('mobile-login-btn');
+        const mobileProfileBtn = document.getElementById('mobile-profile-btn');
+
         if (!loginBtn) return;
 
         if (token) {
             // Hide login button
             loginBtn.style.display = 'none';
+            if (mobileLoginBtn) mobileLoginBtn.style.display = 'none';
+            if (mobileProfileBtn) mobileProfileBtn.style.display = 'inline-block';
+
             const payload = getJwtPayload(token);
             const email = payload.email || '';
             const minecraft_nick = payload.minecraft_nick || '';
@@ -86,8 +92,21 @@
             const parent = loginBtn.parentNode;
             const profileBtn = createProfileButton(email, minecraft_nick);
             parent.appendChild(profileBtn);
+
+            if (mobileProfileBtn) {
+                mobileProfileBtn.onclick = function(e) {
+                    e.preventDefault();
+                    const popup = document.getElementById('profile-popup');
+                    if (popup) {
+                        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+                    }
+                };
+            }
+
         } else {
             loginBtn.style.display = '';
+            if (mobileLoginBtn) mobileLoginBtn.style.display = 'inline-block';
+            if (mobileProfileBtn) mobileProfileBtn.style.display = 'none';
             // Remove profile button if exists
             const profileBtn = document.querySelector('.btn-profile');
             if (profileBtn) profileBtn.remove();
