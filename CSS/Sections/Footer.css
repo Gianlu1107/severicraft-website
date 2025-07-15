@@ -67,6 +67,20 @@
 	background-color: #ce1414;
 }
 
+.footer-links a {
+    color: var(--primary-tc);
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 999px) {    
     .footer {
         padding: 30px;
