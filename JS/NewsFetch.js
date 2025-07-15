@@ -19,34 +19,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             newsContainer.className = 'news-container';
             newsContainer.style.background = '#44521e';
             newsContainer.style.color = '#fff';
-            newsContainer.style.cursor = 'pointer';
-            newsContainer.style.transition = 'background 0.25s';
 
             newsContainer.innerHTML = `
                 <div class="news-item">
-                    <div class="news-item-title flex">
+                    <div class="news-item-title flex" style="cursor: default;">
                         <img src="" alt="">
                         <div class="news-title-text">
                             <h1 style="color:#fff;">${news.title || ''}</h1>
                             <span style="color:#fff;">• ${dateStr}</span>
                         </div>
                     </div>
-                    <div class="news-item-content" style="display:none;">
+                    <div class="news-item-content" style="display:block;">
                         <p class="news-item-content-description" style="color:#fff;">${news.text || ''}</p>
                     </div>
                 </div>
             `;
-
-            const content = newsContainer.querySelector('.news-item-content');
-            content.style.display = 'none';
-
-            newsContainer.addEventListener('click', function() {
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    content.style.display = 'block';
-                }
-            });
 
             container.appendChild(newsContainer);
         });
