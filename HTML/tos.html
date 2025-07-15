@@ -9,13 +9,13 @@
 
     <!--== Stylesheets ===-->
     <link rel="stylesheet" href="../CSS/Base.css">
-    <link rel="stylesheet" href="../CSS/Pages/TOS.css">
+    <link rel="stylesheet" href="../CSS/Pages/Rules.css">  <!-- Usa lo stesso CSS delle Regole -->
     <link rel="stylesheet" href="../CSS/Sections/Footer.css">
     <link rel="stylesheet" href="../CSS/Sections/Navbar.css">
 
     <!--== SEO ===-->
-    <meta name="description" content="Termini di Servizio di SeveriCraft, regole e condizioni d'uso del server Minecraft SeveriCraft.">
-    <meta name="keywords" content="SeveriCraft, termini di servizio, tos, condizioni d'uso, regole server minecraft">
+    <meta name="description" content="Termini di Servizio SeveriCraft, regole e condizioni di utilizzo del server Minecraft SeveriCraft.">
+    <meta name="keywords" content="SeveriCraft, termini di servizio, tos, condizioni uso, regole server minecraft">
     <meta name="author" content="Henry8K">
 </head>
 <body>
@@ -39,55 +39,83 @@
         </div>
     </nav>
 
+    <!--=== Navbar for mobile ===-->
+    <section class="nav-mobile">
+        <div class="nav-mobile-title flex">
+            <div class="navbars-bars">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+            </div>
+            <div class="navbars-title flex">
+                <img src="../Images/logo.png" alt="Logo SeveriCraft" width="30" height="30">
+                <h1>SeveriCraft</h1>
+            </div>
+        </div>
+        <div class="nav-mobile-menu flex" style="flex-direction: column; align-items: center; justify-content: center;">
+            <a href="../HTML/Rules.html"><span>Regole</span></a>
+            <a href="https://vote.severicraft.it"><span>Vota</span></a>
+            <a href="../HTML/Login.html" class="btn-mobile-auth" style="text-align:center;"><span>Accedi</span></a>
+        </div>
+    </section>
+
     <!--=== Main Content ===-->
     <main class="main">
-        <h1>Termini di Servizio (TOS)</h1>
-        <p>Data di aggiornamento: 15/07/2025</p>
+        <div class="rules-title">
+            <h1>Termini di Servizio (TOS)</h1>
+            <span>Aggiornato il 15/07/2025</span>
 
-        <section>
+            <p>Benvenuto nel server Minecraft di <b>SeveriCraft</b>. Utilizzando il nostro server accetti i seguenti Termini di Servizio:</p>
+        </div>
+
+        <div class="rules-content">
             <h2>1. Accettazione dei Termini</h2>
-            <p>Utilizzando SeveriCraft, accetti di rispettare i presenti Termini di Servizio e tutte le leggi applicabili. Se non accetti questi termini, ti invitiamo a non utilizzare il servizio.</p>
-        </section>
+            <p>Utilizzando SeveriCraft, accetti di rispettare questi Termini di Servizio e le leggi applicabili. Se non accetti, ti preghiamo di non utilizzare il server.</p>
+        </div>
 
-        <section>
+        <div class="rules-content">
             <h2>2. Uso del Servizio</h2>
-            <p>SeveriCraft è un server Minecraft gestito da studenti e destinato a uso personale e ricreativo. L’utente si impegna a rispettare le regole e a non utilizzare cheat, hack o metodi illeciti che possano compromettere l’esperienza di gioco degli altri.</p>
-        </section>
+            <p>SeveriCraft è un server Minecraft gestito da studenti senza partita IVA, destinato a scopo educativo e ricreativo.</p>
+            <p>Non è consentito l’uso di cheat, hack o altri metodi che possano compromettere l’esperienza di gioco degli altri utenti.</p>
+        </div>
 
-        <section>
+        <div class="rules-content">
             <h2>3. Registrazione e Account</h2>
-            <p>Per utilizzare alcune funzionalità, come il profilo personale e la visualizzazione delle statistiche di gioco, è richiesta la registrazione tramite il pulsante "Accedi". Sei responsabile di mantenere riservate le tue credenziali e di tutte le attività svolte con il tuo account.</p>
-        </section>
+            <p>Per accedere al profilo personale e visualizzare statistiche in-game, è necessario registrarsi tramite il pulsante <b>Accedi</b>.</p>
+            <p>Sei responsabile della sicurezza del tuo account e di tutte le attività che ne derivano.</p>
+        </div>
 
-        <section>
-            <h2>4. Comportamento degli Utenti</h2>
-            <p>È vietato usare linguaggio offensivo, discriminatorio o molesto. SeveriCraft si riserva il diritto di sospendere o bannare gli utenti che violano le regole o arrecano danno alla comunità.</p>
-        </section>
+        <div class="rules-content">
+            <h2>4. Comportamento</h2>
+            <p>È vietato usare linguaggio offensivo, discriminatorio o molesto. Il rispetto tra giocatori è fondamentale.</p>
+        </div>
 
-        <section>
+        <div class="rules-content">
             <h2>5. Moderazione</h2>
-            <p>Lo staff può applicare sanzioni quali ban, mute e sospensioni per comportamenti contrari al regolamento o che disturbano la comunità. Le decisioni dello staff sono definitive.</p>
-        </section>
+            <p>Lo staff si riserva il diritto di applicare sanzioni come ban e mute in caso di violazioni del regolamento.</p>
+            <p>Le decisioni dello staff sono definitive e vanno rispettate.</p>
+        </div>
 
-        <section>
+        <div class="rules-content">
             <h2>6. Modalità di Gioco</h2>
-            <p>SeveriCraft offre modalità di gioco come Bedwars e Vanilla. Ti impegni a rispettare le regole specifiche di ciascuna modalità e a giocare in modo corretto e rispettoso.</p>
-        </section>
+            <p>Il server offre modalità Bedwars e Vanilla. Ti impegni a rispettare le regole specifiche di ogni modalità per mantenere un ambiente di gioco sano e divertente.</p>
+        </div>
 
-        <section>
-            <h2>7. Esclusione di Garanzie e Limitazione di Responsabilità</h2>
-            <p>SeveriCraft è fornito “così com’è” senza garanzie di alcun tipo. Non ci assumiamo responsabilità per eventuali danni diretti o indiretti derivanti dall’uso del server o dai contenuti pubblicati dagli utenti.</p>
-        </section>
+        <div class="rules-content">
+            <h2>7. Limitazioni di Responsabilità</h2>
+            <p>Il server è fornito “così com’è”. Non garantiamo che sarà sempre disponibile o privo di problemi tecnici.</p>
+            <p>Non ci assumiamo responsabilità per danni diretti o indiretti derivanti dall’uso del server.</p>
+        </div>
 
-        <section>
+        <div class="rules-content">
             <h2>8. Modifiche ai Termini</h2>
-            <p>Ci riserviamo il diritto di modificare i Termini di Servizio in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina e diventeranno effettive immediatamente dopo la pubblicazione.</p>
-        </section>
+            <p>Ci riserviamo il diritto di aggiornare i Termini di Servizio in qualsiasi momento, pubblicando le modifiche su questa pagina.</p>
+            <p>Ti invitiamo a controllare regolarmente la pagina per essere sempre aggiornato.</p>
+        </div>
 
-        <section>
-            <h2>9. Contatti</h2>
-            <p>Per domande riguardo i Termini di Servizio, contattaci tramite la pagina <a href="contatti.html">Contatti</a>.</p>
-        </section>
+        <div class="rules-end">
+            <p>Per domande o chiarimenti, contattaci tramite la pagina <a href="contatti.html">Contatti</a>.</p>
+        </div>
     </main>
 
     <!--=== Footer ===-->
