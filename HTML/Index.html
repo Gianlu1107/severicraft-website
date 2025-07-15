@@ -174,5 +174,18 @@
     <script src="../JS/General.js"></script>
     <script src="../JS/AuthProfile.js"></script>
     <script src="../JS/NewsFetch.js"></script>
+    <style>
+        /* Animazione apertura news */
+        .news-item-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.35s ease;
+        }
+        .news-item-content.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
 </body>
 </html>

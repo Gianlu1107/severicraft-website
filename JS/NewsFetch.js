@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const newsContainer = document.createElement('div');
             newsContainer.className = 'news-container';
             newsContainer.style.background = '#44521e';
-            newsContainer.style.color = '#222';
+            newsContainer.style.color = '#fff';
             newsContainer.style.cursor = 'pointer';
             newsContainer.style.transition = 'background 0.25s';
 
@@ -27,25 +27,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="news-item-title flex">
                         <img src="" alt="">
                         <div class="news-title-text">
-                            <h1 style="color:#222;">${news.title || ''}</h1>
-                            <span style="color:#222;">• ${dateStr}</span>
+                            <h1 style="color:#fff;">${news.title || ''}</h1>
+                            <span style="color:#fff;">• ${dateStr}</span>
                         </div>
                     </div>
-                    <div class="news-item-content" style="display:none;transition:all .25s;">
-                        <p class="news-item-content-description" style="color:#222;">${news.text || ''}</p>
+                    <div class="news-item-content">
+                        <p class="news-item-content-description" style="color:#fff;">${news.text || ''}</p>
                     </div>
                 </div>
             `;
 
-            // Toggle logic
+            // Initially hidden content toggle using 'open' class
+            const content = newsContainer.querySelector('.news-item-content');
+            content.classList.remove('open');
+
             newsContainer.addEventListener('click', function() {
-                const content = newsContainer.querySelector('.news-item-content');
-                if (content.style.display === 'none' || !content.style.display) {
-                    content.style.display = 'block';
-                    content.style.height = 'auto';
+                if (content.classList.contains('open')) {
+                    content.classList.remove('open');
                 } else {
-                    content.style.display = 'none';
-                    content.style.height = '0';
+                    content.classList.add('open');
                 }
             });
 
