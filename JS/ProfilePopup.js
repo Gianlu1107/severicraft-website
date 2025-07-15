@@ -72,6 +72,7 @@
         const token = localStorage.getItem('jwt_token');
         if (!token) return;
         const payload = getJwtPayload(token);
+        console.log('📦 payload jwt:', payload);
         if (!payload || !payload.email || !payload.minecraft_nick) return;
 
         const btnProfile = document.querySelector('.btn-profile');
