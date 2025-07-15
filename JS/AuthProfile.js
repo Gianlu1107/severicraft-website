@@ -9,6 +9,7 @@
             }).join(''));
             return JSON.parse(json);
         } catch (e) {
+            console.error('Errore nella decodifica JWT:', e);
             return {};
         }
     }
@@ -81,6 +82,7 @@
             const payload = getJwtPayload(token);
             const email = payload.email || '';
             const minecraft_nick = payload.minecraft_nick || '';
+            console.log('📦 payload jwt:', payload);
             // Insert profile button
             const parent = loginBtn.parentNode;
             const profileBtn = createProfileButton(email, minecraft_nick);
