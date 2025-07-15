@@ -31,21 +31,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <span style="color:#fff;">• ${dateStr}</span>
                         </div>
                     </div>
-                    <div class="news-item-content">
+                    <div class="news-item-content" style="display:none;">
                         <p class="news-item-content-description" style="color:#fff;">${news.text || ''}</p>
                     </div>
                 </div>
             `;
 
-            // Initially hidden content toggle using 'open' class
             const content = newsContainer.querySelector('.news-item-content');
-            content.classList.remove('open');
+            content.style.display = 'none';
 
             newsContainer.addEventListener('click', function() {
-                if (content.classList.contains('open')) {
-                    content.classList.remove('open');
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
                 } else {
-                    content.classList.add('open');
+                    content.style.display = 'block';
                 }
             });
 
