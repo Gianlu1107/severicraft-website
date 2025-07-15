@@ -159,16 +159,13 @@
 <footer class="footer">
     <div class="footer-container">
 
-<footer class="footer">
-    <div class="footer-container">
-
         <!-- Parte Testuale -->
         <div class="footer-items">
             <span class="sp-1">©2025 SeveriCraft | Tutti i diritti riservati.</span><br>
             <span class="sp-2">Minecraft è un marchio di Mojang e SeveriCraft non è affiliato o approvato da Mojang.</span><br>
 
             <!-- Link Legali -->
-            <div class="footer-links">
+            <div class="footer-links" style="margin-top: 10px;">
                 <a href="/tos.html">Termini</a> |
                 <a href="/privacy.html">Privacy</a> |
                 <a href="/cookie.html">Cookie</a> |
@@ -179,29 +176,34 @@
         <!-- Social -->
         <div class="footer-socials">
             <a href="https://discord.com" title="Discord">
-                <img src="../Images/discord.webp" alt="Discord" width="40" height="40">
+                <img class="discord-social" src="../Images/discord.webp" alt="Discord">
             </a>
             <a href="https://youtube.com" title="YouTube">
-                <img src="../Images/youtube.webp" alt="YouTube" width="40" height="40">
+                <img class="yt-social" src="../Images/youtube.webp" alt="YouTube">
             </a>
         </div>
 
-    </div> <!-- Chiusura footer-container -->
+    </div>
 </footer>
 
-<style>
-    /* Corpo news sempre visibile */
-    .news-item-content {
-        max-height: none;
-        opacity: 1;
-        overflow: visible;
-        transition: none;
-        display: block;
-    }
-    .news-item-content.open {
-        max-height: none;
-        opacity: 1;
-    }
-</style>
+
+    <script src="../JS/Function.js"></script>
+    <script src="../JS/General.js"></script>
+    <script src="../JS/AuthProfile.js"></script>
+    <script src="../JS/NewsFetch.js"></script>
+    <style>
+        /* Corpo news sempre visibile */
+        .news-item-content {
+            max-height: none;
+            opacity: 1;
+            overflow: visible;
+            transition: none;
+            display: block;
+        }
+        .news-item-content.open {
+            max-height: none;
+            opacity: 1;
+        }
+    </style>
 </body>
 </html>
