@@ -6,7 +6,9 @@
 }
 
 .footer-container {
+	display: flex; /* aggiunto per fallback */
 	justify-content: space-between;
+	flex-wrap: wrap; /* per sicurezza su schermi piccoli */
 }
 
 .footer-credits {
@@ -53,6 +55,10 @@
 	margin: 5px;
 	padding: 10px;
 	border-radius: 5px;
+
+	/* dimensione fissa per evitare che diventino troppo grandi */
+	width: 40px;
+	height: 40px;
 }
 
 .discord-social {
@@ -79,7 +85,6 @@
     text-decoration: underline;
     color: #333;
 }
-
 
 @media screen and (min-width: 320px) and (max-width: 999px) {    
     .footer {
@@ -114,9 +119,10 @@
         }
 
         .footer-socials img {
+            /* override dimensioni a 30x30 per desktop */
             width: 30px;
             height: 30px;
-        }
+		}
 
         .footer-items {
             margin: 20px;
