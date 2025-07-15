@@ -175,15 +175,16 @@
     <script src="../JS/AuthProfile.js"></script>
     <script src="../JS/NewsFetch.js"></script>
     <style>
-        /* animazione apertura/chiusura corpo news */
+        /* Corpo news sempre visibile */
         .news-item-content {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease, opacity 0.35s ease;
+            max-height: none;
+            opacity: 1;
+            overflow: visible;
+            transition: none;
+            display: block;
         }
         .news-item-content.open {
-            max-height: 500px; /* abbastanza grande da contenere il testo */
+            max-height: none;
             opacity: 1;
         }
     </style>

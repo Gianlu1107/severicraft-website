@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <span style="color:#fff;">• ${dateStr}</span>
                         </div>
                     </div>
-                    <div class="news-item-content open">
+                    <div class="news-item-content" style="display:block;">
                         <p class="news-item-content-description" style="color:#fff;">${news.text || ''}</p>
                     </div>
                 </div>

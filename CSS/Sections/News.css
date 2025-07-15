@@ -49,9 +49,11 @@
 }
 
 .news-item-content {
-	overflow: hidden;
-	height: 0;
-	transition: all .25s ease;
+	overflow: visible;
+	height: auto;
+	max-height: none;
+	transition: none;
+	display: block;
 }
 
 @media screen and (min-width: 320px) and (max-width: 999px) {
