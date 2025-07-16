@@ -38,13 +38,22 @@
   <!-- form contatti -->
   <main class="main" style="padding: 40px 20px; max-width: 700px; margin: auto;">
     <h1 style="text-align:center;">Contattaci</h1>
-    <form id="contact-form" style="display:flex; flex-direction:column; gap:20px;">
-      <input type="text" name="nome" placeholder="Nome" required>
-      <input type="text" name="cognome" placeholder="Cognome" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="minecraft_nick" placeholder="Nickname Minecraft (opzionale)">
-      <textarea name="messaggio" placeholder="Scrivi il tuo messaggio..." rows="6" required></textarea>
-      <button type="submit" style="padding: 12px 20px; background:#44521e; color:white; border:none; border-radius:6px; cursor:pointer;">Invia</button>
+    <form id="contact-form" style="display:flex; flex-direction:column; gap:24px;">
+      <div style="display: flex; gap: 16px;">
+        <input type="text" name="nome" placeholder="Nome" required
+          style="flex:1; min-width:0; padding:14px 16px; font-size:1.1em; border:1.5px solid #44521e; border-radius:7px;">
+        <input type="text" name="cognome" placeholder="Cognome" required
+          style="flex:1; min-width:0; padding:14px 16px; font-size:1.1em; border:1.5px solid #44521e; border-radius:7px;">
+      </div>
+      <div style="display: flex; gap: 16px;">
+        <input type="email" name="email" placeholder="Email" required
+          style="flex:1; min-width:0; padding:14px 16px; font-size:1.1em; border:1.5px solid #44521e; border-radius:7px;">
+        <input type="text" name="minecraft_nick" placeholder="Nickname Minecraft (opzionale)"
+          style="flex:1; min-width:0; padding:14px 16px; font-size:1.1em; border:1.5px solid #44521e; border-radius:7px;">
+      </div>
+      <textarea name="messaggio" placeholder="Scrivi il tuo messaggio..." rows="7" required
+        style="width:100%; min-height:140px; resize:vertical; padding:16px; font-size:1.15em; border:1.5px solid #44521e; border-radius:7px;"></textarea>
+      <button type="submit" style="padding: 14px 0; background:#44521e; color:white; border:none; border-radius:7px; cursor:pointer; font-size:1.15em;">Invia</button>
       <p id="response" style="text-align:center;"></p>
     </form>
   </main>
