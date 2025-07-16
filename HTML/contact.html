@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>SeveriCraft - Contatti</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../CSS/Base.css">
+  <link rel="stylesheet" href="../CSS/Sections/Footer.css">
+  <link rel="stylesheet" href="../CSS/Sections/Navbar.css">
+  <link rel="stylesheet" href="../CSS/Classes/Framework.css">
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="nav">
+    <div class="nav-logo flex">
+      <img src="../Images/logo.png" alt="Logo SeveriCraft" width="70" height="70">
+      <h1>SeveriCraft</h1> 
+    </div>
+    <div class="nav-list flex nav-list-centered">
+      <a href="../HTML/Index.html"><span>Home</span></a>
+      <a href="../HTML/Rules.html"><span>Regole</span></a>
+      <a href="https://vote.severicraft.it"><span>Vota</span></a>
+      <a href="https://discord.severicraft.it"><span>Discord</span></a> 
+    </div>
+    <div class="flex">
+      <a href="../HTML/Login.html" class="nav-btn btn-login flex">
+        <img src="../Images/login.webp" alt="Login" width="20" height="20">
+        <span>Accedi</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- form contatti -->
+  <main class="main" style="padding: 40px 20px; max-width: 700px; margin: auto;">
+    <h1 style="text-align:center;">Contattaci</h1>
+    <form id="contact-form" style="display:flex; flex-direction:column; gap:20px;">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="cognome" placeholder="Cognome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="minecraft_nick" placeholder="Nickname Minecraft (opzionale)">
+      <textarea name="messaggio" placeholder="Scrivi il tuo messaggio..." rows="6" required></textarea>
+      <button type="submit" style="padding: 12px 20px; background:#44521e; color:white; border:none; border-radius:6px; cursor:pointer;">Invia</button>
+      <p id="response" style="text-align:center;"></p>
+    </form>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-items">
+        <span class="sp-1">©2025 SeveriCraft | Tutti i diritti riservati.</span>
+        <span class="sp-2">Minecraft è un marchio di Mojang e SeveriCraft non è affiliato o approvato da Mojang.</span>
+        <div class="footer-links">
+          <a href="/HTML/TOS.html">Termini</a> |
+          <a href="/HTML/Privacy.html">Privacy</a> |
+          <a href="/HTML/Cookie.html">Cookie</a> |
+          <a href="/HTML/Contatti.html">Contatti</a>
+        </div>
+      </div>
+      <div class="footer-socials">
+        <a href="https://discord.severicraft.it"><img src="../Images/discord.webp" alt="Discord"></a>
+        <a href="https://youtube.com"><img src="../Images/youtube.webp" alt="YouTube"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const response = await fetch("https://api.severicraft.it/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(formData))
+      });
+      const result = await response.json();
+      document.getElementById("response").innerText = result.message;
+    });
+  </script>
+</body>
+</html>
