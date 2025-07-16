@@ -111,18 +111,68 @@
     <script src="../JS/Rules.js"></script>
     <script src="../JS/General.js"></script>
     <script src="../JS/AuthProfile.js"></script>
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const response = await fetch("https://api.severicraft.it/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(formData))
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const response = await fetch("https://api.severicraft.it/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(Object.fromEntries(formData))
+        });
+        const result = await response.json();
+        if (result.success) {
+          showSuccessPopup("Messaggio inviato con successo!");
+        } else {
+          document.getElementById("response").innerText = result.message || "Errore nell'invio del messaggio.";
+        }
       });
-      const result = await response.json();
-      document.getElementById("response").innerText = result.message;
-    });
-  </script>
+
+      function showSuccessPopup(message) {
+        // Remove existing popup if present
+        const oldPopup = document.getElementById('success-popup');
+        if (oldPopup) oldPopup.remove();
+
+        const popup = document.createElement('div');
+        popup.id = 'success-popup';
+        popup.style.position = 'fixed';
+        popup.style.top = '40px';
+        popup.style.left = '50%';
+        popup.style.transform = 'translateX(-50%)';
+        popup.style.background = '#fff';
+        popup.style.border = '2px solid #44521e';
+        popup.style.borderRadius = '10px';
+        popup.style.boxShadow = '0 8px 32px rgba(0,0,0,0.18)';
+        popup.style.padding = '28px 38px 22px 28px';
+        popup.style.zIndex = '9999';
+        popup.style.color = '#222';
+        popup.style.fontSize = '1.15em';
+        popup.style.minWidth = '260px';
+        popup.style.textAlign = 'center';
+
+        // Close button
+        const closeBtn = document.createElement('span');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.style.position = 'absolute';
+        closeBtn.style.top = '8px';
+        closeBtn.style.right = '16px';
+        closeBtn.style.fontSize = '1.5em';
+        closeBtn.style.cursor = 'pointer';
+        closeBtn.style.color = '#44521e';
+        closeBtn.setAttribute('aria-label', 'Chiudi');
+        closeBtn.onclick = function() {
+          popup.remove();
+        };
+
+        popup.appendChild(closeBtn);
+
+        const msg = document.createElement('div');
+        msg.textContent = message;
+        msg.style.marginTop = '10px';
+        popup.appendChild(msg);
+
+        document.body.appendChild(popup);
+      }
+    </script>
 </body>
 </html>
