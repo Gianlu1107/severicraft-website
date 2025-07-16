@@ -166,9 +166,10 @@
 
         popup.appendChild(closeBtn);
 
-        const msg = document.createElement('div');
+        const msg = document.createElement('h4');
         msg.textContent = message;
         msg.style.marginTop = '10px';
+        msg.style.color = '#222';
         popup.appendChild(msg);
 
         document.body.appendChild(popup);
