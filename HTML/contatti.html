@@ -15,25 +15,49 @@
   <link rel="stylesheet" href="../CSS/Classes/Framework.css">
 </head>
 <body>
-  <!-- navbar -->
-  <nav class="nav">
-    <div class="nav-logo flex">
-      <img src="../Images/logo.png" alt="Logo SeveriCraft" width="70" height="70">
-      <h1>SeveriCraft</h1> 
-    </div>
-    <div class="nav-list flex nav-list-centered">
-      <a href="../HTML/Index.html"><span>Home</span></a>
-      <a href="../HTML/Rules.html"><span>Regole</span></a>
-      <a href="https://vote.severicraft.it"><span>Vota</span></a>
-      <a href="https://discord.severicraft.it"><span>Discord</span></a> 
-    </div>
-    <div class="flex">
-      <a href="../HTML/Login.html" class="nav-btn btn-login flex">
-        <img src="../Images/login.webp" alt="Login" width="20" height="20">
-        <span>Accedi</span>
-      </a>
-    </div>
-  </nav>
+    <!--=== Navigation Bar ===-->
+    <nav class="nav">
+        <div class="nav-logo flex">
+            <img src="../Images/logo.png" alt="Logo server SeveriCraft" width="70px" height="70px">
+            <h1>SeveriCraft</h1> 
+        </div>
+
+        <div class="nav-list flex nav-list-centered">
+            <a class="nav-item-1" href="../HTML/Index.html"><span>Home</span></a> 
+            <a class="nav-item-3" href="../HTML/Rules.html"><span>Regole</span></a>
+            <a class="nav-item-5" href="https://vote.severicraft.it"><span>Vota</span></a>
+            <a class="nav-item-4" href="https://discord.severicraft.com"><span>Discord</span></a> 
+        </div>
+
+        <div class="flex">
+            <a href="../HTML/Login.html" class="nav-btn btn-login flex">
+                <img src="../Images/login.webp" alt="Icona Login" width="20px" height="20px">
+                <span>Accedi</span>
+            </a>
+        </div>
+    </nav>
+
+    <!--=== Navbar for mobile ===-->
+    <section class="nav-mobile">
+        <div class="nav-mobile-title flex">
+            <div class="navbars-bars">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+            </div>
+            <div class="navbars-title flex">
+                <img src="../Images/logo.png" alt="Logo server SeveriCraft" width="30px" height="30px">
+                <h1>SeveriCraft</h1>
+            </div>
+        </div>
+        <div class="nav-mobile-menu flex" style="flex-direction: column; align-items: center; justify-content: center;">
+            <a href="../HTML/Rules.html"><span>Regole</span></a>
+            <a href="https://vote.severicraft.it"><span>Vota</span></a>
+            <a id="mobile-login-btn" href="../HTML/Login.html" class="btn-mobile-auth" style="text-align:center;"><span>Accedi</span></a>
+            <button id="mobile-profile-btn" class="btn-profile" style="display: none; text-align:center;"><span>Profilo</span></button>
+            <!-- Bottone Profilo (aggiunto via JS con classe btn-profile se loggato) -->
+        </div>
+    </section>
 
   <!-- form contatti -->
   <main class="main" style="padding: 40px 20px; max-width: 700px; margin: auto;">
@@ -51,32 +75,38 @@
         <input type="text" name="minecraft_nick" placeholder="Nickname Minecraft (opzionale)"
           style="flex:1; min-width:0; padding:14px 16px; font-size:1.1em; border:1.5px solid #44521e; border-radius:7px;">
       </div>
-      <textarea name="messaggio" placeholder="Scrivi il tuo messaggio..." rows="7" required
-        style="width:100%; min-height:140px; resize:vertical; padding:16px; font-size:1.15em; border:1.5px solid #44521e; border-radius:7px;"></textarea>
+      <div style="display: flex; gap: 16px;">
+        <textarea name="messaggio" placeholder="Scrivi il tuo messaggio..." rows="7" required
+          style="flex:1; min-width:0; padding:16px; font-size:1.15em; border:1.5px solid #44521e; border-radius:7px; resize:none;"></textarea>
+      </div>
       <button type="submit" style="padding: 14px 0; background:#44521e; color:white; border:none; border-radius:7px; cursor:pointer; font-size:1.15em;">Invia</button>
       <p id="response" style="text-align:center;"></p>
     </form>
   </main>
 
-  <!-- footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-items">
-        <span class="sp-1">©2025 SeveriCraft | Tutti i diritti riservati.</span>
-        <span class="sp-2">Minecraft è un marchio di Mojang e SeveriCraft non è affiliato o approvato da Mojang.</span>
-        <div class="footer-links">
-          <a href="/HTML/TOS.html">Termini</a> |
-          <a href="/HTML/Privacy.html">Privacy</a> |
-          <a href="/HTML/Cookie.html">Cookie</a> |
-          <a href="/HTML/Contatti.html">Contatti</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-items">
+                <span class="sp-1">©2025 SeveriCraft | Tutti i diritti riservati.</span>
+                <span class="sp-2">Minecraft è un marchio di Mojang e SeveriCraft non è affiliato o approvato da Mojang.</span>
+                <div class="footer-links">
+                    <a href="/HTML/TOS.html">Termini</a> |
+                    <a href="/HTML/Privacy.html">Privacy</a> |
+                    <a href="/HTML/Cookie.html">Cookie</a> |
+                    <a href="/HTML/Contatti.html">Contatti</a>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://discord.severicraft.it" title="Discord">
+                    <img class="discord-social" src="../Images/discord.webp" alt="Discord">
+                </a>
+                <a href="https://youtube.com" title="YouTube">
+                    <img class="yt-social" src="../Images/youtube.webp" alt="YouTube">
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="footer-socials">
-        <a href="https://discord.severicraft.it"><img src="../Images/discord.webp" alt="Discord"></a>
-        <a href="https://youtube.com"><img src="../Images/youtube.webp" alt="YouTube"></a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <script>
     document.getElementById("contact-form").addEventListener("submit", async function(e) {
