@@ -59,7 +59,7 @@
     justify-content: flex-start;
     display: flex;
     gap: 30px;
-    margin-left: -1200px; /* questo centra rispetto al contenuto principale */
+    margin-left: -120px; /* questo centra rispetto al contenuto principale */
 }
 
 .nav-btn {
