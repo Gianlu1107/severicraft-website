@@ -7,7 +7,6 @@
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-image: url(../Sections/Assets/background.webp);
-	overflow-x: hidden;
 }
 
 .header-text {
@@ -15,14 +14,8 @@
 	text-transform: uppercase;
 	color: var(--secondary-tc);
 	font-family: 'Poppins', sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	padding: 0 10px;
 	box-sizing: border-box;
-	max-width: 100%;
-	transform: translateX(-10px); /* spostamento verso sinistra */
 }
 
 .header h1 {
@@ -41,12 +34,6 @@
 @media screen and (min-width: 320px) and (max-width: 999px) {
 	.header {
 		padding: 50px 30px;
-	}
-
-	.header-text {
-		align-items: center;
-		text-align: center;
-		transform: translateX(-10px); /* spostamento anche in mobile */
 	}
 
 	.header-text h1 {
