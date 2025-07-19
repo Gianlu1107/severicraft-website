@@ -7,6 +7,7 @@
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-image: url(../Sections/Assets/background.webp);
+	overflow-x: hidden;
 }
 
 .header-text {
@@ -18,6 +19,9 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 0 10px;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
 .header h1 {
@@ -50,14 +54,14 @@
 	.header-text span {
 		font-size: 16px;
 	}
+}
 
-	@media screen and (min-width: 424px) {
-		.header-text h1 {
-			font-size: 70px;
-		}
+@media screen and (min-width: 424px) {
+	.header-text h1 {
+		font-size: 70px;
+	}
 
-		.header-text span {
-			font-size: 26px;
-		}
+	.header-text span {
+		font-size: 26px;
 	}
 }
