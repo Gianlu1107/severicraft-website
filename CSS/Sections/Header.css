@@ -14,6 +14,10 @@
 	text-transform: uppercase;
 	color: var(--secondary-tc);
 	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .header h1 {
@@ -32,6 +36,11 @@
 @media screen and (min-width: 320px) and (max-width: 999px) {
 	.header {
 		padding: 50px 30px;
+	}
+
+	.header-text {
+		align-items: center;
+		text-align: center;
 	}
 
 	.header-text h1 {
