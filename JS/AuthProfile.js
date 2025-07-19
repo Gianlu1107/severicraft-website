@@ -48,7 +48,16 @@
                 <strong style="color:#222;">Minecraft Nick:</strong><br>
                 <span style="color:#222;">${minecraft_nick}</span>
             </div>
-            <button id="profile-stats-btn" style="background:#44521e;color:#fff;border:none;padding:10px 22px;border-radius:6px;cursor:pointer;font-size:16px;">Stats</button>
+            <div style="position: relative; min-height: 48px;">
+                <button id="profile-stats-btn"
+                    style="position: absolute; left: 0; bottom: 0; background:#44521e;color:#fff;border:none;padding:10px 22px;border-radius:6px;cursor:pointer;font-size:16px;">
+                    Stats
+                </button>
+                <button id="profile-logout-btn"
+                    style="position: absolute; right: 0; bottom: 0; background:#d32f2f;color:#fff;border:none;padding:10px 22px;border-radius:6px;cursor:pointer;font-size:16px;">
+                    Logout
+                </button>
+            </div>
         `;
 
         document.body.appendChild(popup);
@@ -66,6 +75,12 @@
 
         popup.querySelector('#profile-stats-btn').onclick = function() {
             window.open('https://stats.severicraft.it', '_blank');
+        };
+
+        popup.querySelector('#profile-logout-btn').onclick = function() {
+            localStorage.removeItem('jwt_token');
+            popup.style.display = 'none';
+            setupProfileUI();
         };
 
         return btnProfile;
