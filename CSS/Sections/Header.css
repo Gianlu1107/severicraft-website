@@ -1,7 +1,7 @@
 @import url(../Components/Palette.css);
 
 .header {
-	padding: 6em;
+	padding: 6em 0;
 	background-size: cover;
 	background-position: top;
 	background-attachment: fixed;
@@ -14,8 +14,10 @@
 	text-transform: uppercase;
 	color: var(--secondary-tc);
 	font-family: 'Poppins', sans-serif;
-	padding: 0 10px;
-	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .header h1 {
@@ -33,7 +35,12 @@
 
 @media screen and (min-width: 320px) and (max-width: 999px) {
 	.header {
-		padding: 50px 30px;
+		padding: 50px 0;
+	}
+
+	.header-text {
+		align-items: center;
+		text-align: center;
 	}
 
 	.header-text h1 {
