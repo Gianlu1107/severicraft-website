@@ -74,7 +74,6 @@
 }
 
 @media screen and (min-width: 319px) and (max-width: 1000px) {
-
     .login {
         padding: 50px 0px;
     }
@@ -86,5 +85,36 @@
 
     .login h2 {
         font-size: 50px;
+    }
+}
+
+/* ✅ Privacy checkbox custom style */
+.login .privacy-checkbox-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.login .privacy-checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: var(--theme-green);
+}
+
+.login .privacy-checkbox-container a {
+    color: var(--theme-green);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .login .privacy-checkbox-container {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 13px;
     }
 }
