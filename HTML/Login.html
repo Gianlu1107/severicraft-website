@@ -32,9 +32,9 @@
     <!--=== SEO ===-->
     <meta name="description" content="Accedi ora al sito ufficiale di SeveriCraft e continua i tuoi acquisti.">
     <meta name="keywords" content="severicraft, minecraft shop, server minecraft, login severicraft">
-    <meta name="author" content="Henry8K"> <!--=== Github: Henry8K ===-->
-    <meta name="robots" content="index, follow"> <!--=== Robots indexing ===-->
-    <meta name="googlebot" content="index, follow"> <!--=== Robots indexing ===-->
+    <meta name="author" content="Henry8K">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://severicraft.it/HTML/Login.html">
 </head>
 <body>
@@ -76,7 +76,6 @@
             <a href="https://vote.severicraft.it"><span>Vota</span></a>
             <a id="mobile-login-btn" href="../HTML/Login.html" class="btn-mobile-auth" style="text-align:center;"><span>Accedi</span></a>
             <button id="mobile-profile-btn" class="btn-profile" style="display: none; text-align:center;"><span>Profilo</span></button>
-            <!-- Bottone Profilo (aggiunto via JS con classe btn-profile se loggato) -->
         </div>
     </section>
 
@@ -89,7 +88,17 @@
                 <input type="email" id="email" placeholder="Inserisci la tua email" required>
                 <label for="password">Password:</label>
                 <input type="password" id="password" placeholder="Inserisci la tua password" required>
+
+                <!-- ✅ Checkbox privacy -->
+                <div style="margin-top: 15px;">
+                    <input type="checkbox" id="privacy-checkbox" required>
+                    <label for="privacy-checkbox">
+                        Dichiaro di aver letto e accettato la <a href="/HTML/Privacy.html" target="_blank">Privacy Policy</a>.
+                    </label>
+                </div>
+
                 <button type="submit">Accedi</button>
+
                 <div id="login-error" style="color: red; margin-top: 10px; display: none;"></div>
                 <div style="margin-top: 15px;">
                     <a href="Register.html">Non hai un account? Registrati</a>
@@ -97,6 +106,7 @@
             </div>
         </form>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -120,6 +130,7 @@
             </div>
         </div>
     </footer>
+
     <script src="../JS/Function.js"></script>
     <script src="../JS/General.js"></script>
     <script src="../JS/AuthProfile.js"></script>
@@ -158,4 +169,3 @@
     </script>
 </body>
 </html>
-
