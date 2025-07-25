@@ -90,13 +90,13 @@
 
 /* ✅ Privacy checkbox custom style */
 .login .privacy-checkbox-container {
-    margin-top: 20px;
-    margin-bottom: 18px;
+    margin-top: 22px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 15.5px;
+    line-height: 1.7;
     color: #333;
 }
 
