@@ -1,65 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <!--=== Default tags ===-->
     <meta charset="UTF-8">
-    <title>SeveriCraft</title>
+    <title>SeveriCraft - Minecraft Server</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Images/logo.webp" type="image/x-icon">
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W25SFLL9');</script>
-<!-- End Google Tag Manager -->
+
     <!--=== Social profile ===-->
-    <meta property="og:title" content="SeveriCraft - Home">
-    <meta property="og:description" content="Official site of the SeveriCraft server">
+    <meta property="og:title" content="Minecket - Home">
+    <meta property="og:description" content="Sito ufficiale del server SeveriCraft Minecraft, acquista VIP, resta aggiornato e altro!">
     <meta property="og:image" content="https://images.alphacoders.com/783/thumbbig-783153.webp">
 
     <!--== SEO ===-->
-    <meta name="description" content="Sito ufficiale del server SeveriCraft">
-    <meta name="keywords" content="severicraft, minecraft shop, minecraft server, severicraft server">
+    <meta name="description" content="Sito ufficiale del server SeveriCraft Minecraft, acquista VIP, resta aggiornato e altro!">
+    <meta name="keywords" content="severicraft, minecraft shop, minecraft server, severicraft minecraft server">
     <meta name="author" content="Henry8K"> <!--=== Github: Henry8K ===-->
     <meta name="robots" content="index, follow"> <!--=== Robots indexing ===-->
     <meta name="googlebot" content="index, follow"> <!--=== Robots indexing ===-->
     <link rel="canonical" href="https://severicraft.it/"> <!--=== Enter your URL here ===-->
 </head>
+
+<!--=== Style ===-->
 <style>
     #loading {
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+     position: fixed;
+     z-index: 9999;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
     }
+    
     .spinner {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 5px solid #ccc;
-        border-top-color: #333;
-        animation: spin 1s ease-in-out infinite
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     border: 5px solid #ccc;
+     border-top-color: #333;
+     animation: spin 1s ease-in-out infinite
     }
+    
     @keyframes spin {
         0% {transform: rotate(0deg);}
         100% {transform: rotate(360deg);}
     }
+
 </style>
+
+<!--=== Spinner ===-->
 <body>
     <div id="loading">
         <div class="spinner"></div>
     </div>
+
     <div id="error-message">
         <h1>Reload the page!</h1>
     </div>
-    <script src="JS/Preview.js" onerror="document.getElementById('error-message').style.display='block';"></script>
+
+    <script src="JS/Preview.js"></script>
 </body>
 </html>
