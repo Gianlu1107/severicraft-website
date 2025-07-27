@@ -7,20 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../Images/logo.webp" type="image/x-icon">
-     <!-- Start cookiebot banner -->
-    <script defer data-cookieconsent="ignore">    window.dataLayer = window.dataLayer || [];    function gtag() {        dataLayer.push(arguments);    }    gtag("consent", "default", {        ad_personalization: "denied",        ad_storage: "denied",        ad_user_data: "denied",        analytics_storage: "denied",        functionality_storage: "denied",        personalization_storage: "denied",        security_storage: "granted",        wait_for_update: 500,    });    gtag("set", "ads_data_redaction", true);    gtag("set", "url_passthrough", false);</script>
+    
+    <!-- preload background per miglior LCP -->
+    <link rel="preload" as="image" href="../Sections/Assets/background.webp" type="image/webp">
+
+    <!-- Start cookiebot banner -->
+    <script defer data-cookieconsent="ignore">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("consent", "default", {
+            ad_personalization: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            analytics_storage: "denied",
+            functionality_storage: "denied",
+            personalization_storage: "denied",
+            security_storage: "granted",
+            wait_for_update: 500,
+        });
+        gtag("set", "ads_data_redaction", true);
+        gtag("set", "url_passthrough", false);
+    </script>
     <script id="Cookiebot" defer src="https://consent.cookiebot.com/uc.js" data-cbid="e577acbd-ac8c-43b6-834e-e77c151ae41c" data-blockingmode="auto" type="text/javascript"></script>
     <!-- End cookiebot banner -->
-    <!-- Google tag (gtag.js) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" as="image" href="../Sections/Assets/background.webp" type="image/webp">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-57PYWLVEMF');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-57PYWLVEMF');
+    </script>
+
     <!--=== Stylesheets ===-->
     <link rel="stylesheet" href="../CSS/Base.css">
     <link rel="stylesheet" href="../CSS/Sections/News.css">
@@ -40,16 +60,17 @@
     <!--=== SEO ===-->
     <meta name="description" content="Sito ufficiale del server SeveriCraft Minecraft, acquista VIP, resta aggiornato e altro!">
     <meta name="keywords" content="severicraft, minecraft shop, minecraft server, severicraft minecraft server">
-    <meta name="author" content="Henry8K"> <!--=== Github: Henry8K ===--> 
-    <meta name="robots" content="index, follow"> <!--=== Robots indexing ===-->
-    <meta name="googlebot" content="index, follow"> <!--=== Robots indexing ===-->
+    <meta name="author" content="Henry8K">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://severicraft.it/HTML/Index.html">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W25SFLL9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W25SFLL9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!--=== Navigation Bar ===-->
     <nav class="nav">
         <div class="nav-logo flex">
@@ -88,7 +109,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://vote.severicraft.it"><span>Vota</span></a>
             <a id="mobile-login-btn" href="../HTML/Login.html" class="btn-mobile-auth" style="text-align:center;"><span>Accedi</span></a>
             <button id="mobile-profile-btn" class="btn-profile" style="display: none; text-align:center;"><span>Profilo</span></button>
-            <!-- Bottone Profilo (aggiunto via JS con classe btn-profile se loggato) -->
         </div>
     </section>
 
@@ -131,10 +151,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
-    <!-- === Discord widget begin === -->
-   
-    <!-- === Discord widget end === -->
-    <!-- === Discover section === -->
+
+    <!--=== Discover section ===-->
     <section class="discover">
         <div class="discover-container">
             <h1>Scopri di più</h1>
@@ -190,10 +208,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script src="../JS/Function.js"></script>
-    <script src="../JS/General.js"></script>
-    <script src="../JS/AuthProfile.js"></script>
-    <script src="../JS/NewsFetch.js"></script>
+    <script defer src="../JS/Function.js"></script>
+    <script defer src="../JS/General.js"></script>
+    <script defer src="../JS/AuthProfile.js"></script>
+    <script defer src="../JS/NewsFetch.js"></script>
+
     <style>
         /* Corpo news sempre visibile */
         .news-item-content {
