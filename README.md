@@ -45,11 +45,11 @@ The work was evenly split between **Gianlu1107** and **Gecko129**, carefully han
 ```
 📁 severicraft-website/
 ├── CSS/                   ← All site styles
-├── Errors/                ← Global + sectional styles
-├── HTML/                  ← Functions and interactions
+├── Errors/                ← Custom pages for errors (404, 500, etc.)
+├── HTML/                  ← Global + sectional styles
 ├── Images/                ← Optimized images
-├── JS/                    ← Custom pages for errors (404, 500, etc.)
-├── _redirects             ← For handling Netlify errors
+├── JS/                    ← Functions and interactions
+├── _redirects             ← For handling Netlify redirects
 ├── index.html             ← Main landing page
 ├── LICENSE                ← MIT License
 └── README.md              ← This file
