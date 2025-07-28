@@ -1,23 +1,122 @@
-MIT License
+                    SEVERICRAFT PUBLIC LICENSE (SPL)
+                          Version 1.1 – 2025
 
-Copyright (c) 2025 Gianlu1107, Gecko129
+Copyright (c) 2025 Gianlu1107, Gecko129  
+Original foundation: Based on work by HenryDM (MIT Licensed)  
+License version authors: Gianlu1107 and Gecko129
 
-Based on an original template by HenryDM (c) 2023 — modified and expanded by Gianlu1107 and Gecko129.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this Software and associated documentation files (the “Software”), to use, modify, and distribute it under the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. DEFINITIONS
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- “The Software” means all code, assets, files, data, or other content subject to this license.
+- “You” means any individual or legal entity exercising permissions granted by this License.
+- “Original Authors” refers to Gianlu1107 and Gecko129.
+- “Derived Work” means any modification, adaptation, improvement, or combination based on the Software.
+- “Source Code” refers to the preferred form of the Software for making modifications.
+- “Convey” means any form of distribution or making available to third parties.
+
+
+2. RIGHTS GRANTED
+
+Subject to compliance with this License, You are hereby granted a worldwide, royalty-free, non-exclusive, irrevocable license to:
+
+- Use and execute the Software for any lawful purpose.
+- Study and modify the Software, including creating Derived Works.
+- Distribute the Software and Derived Works, in Source Code and/or compiled form, under the same license terms.
+
+
+3. CONDITIONS FOR DISTRIBUTION
+
+Any form of distribution of the Software or any Derived Work must comply with all of the following:
+
+a. **License Inclusion**  
+You must include this License in its entirety and retain all original copyright notices.
+
+b. **Attribution**  
+All distributions must include clear and visible credit to “Gianlu1107” and “Gecko129” as the Original Authors.
+
+c. **Modification Disclosure**  
+Any modifications must be explicitly stated and dated, with authorship clearly indicated.
+
+d. **Copyleft Continuity**  
+Any Derived Work must be licensed under this same SeveriCraft Public License, without additional restrictions.
+
+
+4. WARRANTY DISCLAIMER
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.  
+THIS INCLUDES, BUT IS NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.  
+THE AUTHORS SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM THE USE OR DISTRIBUTION OF THE SOFTWARE.
+
+
+5. ANTI-TIVOIZATION
+
+You may not distribute the Software in a form or on a device that restricts the user’s ability to modify or replace the Software.
+
+
+6. NETWORK USE CLAUSE
+
+If the Software is used to provide functionality over a network (e.g., as part of a web application or backend service), You must ensure that users have access to the Source Code, and are granted the same freedoms as outlined in this License.
+
+
+7. PATENT CLAUSE
+
+You may not initiate patent litigation against any party alleging that the Software, or a Derived Work, infringes a patent.  
+Doing so will result in automatic termination of this License.
+
+
+8. TERMINATION
+
+Failure to comply with the terms of this License results in automatic termination of the rights granted herein.  
+However, if the violation is cured within 30 days of notification, the License is reinstated automatically.
+
+
+9. THIRD-PARTY COMPONENTS
+
+If the Software includes third-party libraries or assets, they must be identified, and their respective licenses respected.  
+This License only covers the parts authored by the Original Authors.
+
+
+10. ORIGIN & INSPIRATION
+
+This project is based on an original template by **HenryDM**, released under the [MIT License](https://opensource.org/licenses/MIT).  
+The current version represents substantial independent work and modifications made by Gianlu1107 and Gecko129.  
+This License applies exclusively to the updated, modified, or rewritten version of the Software.
+
+
+11. INTERNATIONAL EFFECT
+
+This License is intended to have legal effect internationally, and shall be interpreted in accordance with the principles of open-source distribution under global standards.  
+In case of conflict with local legislation, the terms that preserve the largest amount of freedom to the user and respect for the authorship shall prevail.
+
+
+12. VERSIONING AND UPDATES
+
+This License may be updated by its original authors. Any updates will be versioned and publicly documented.  
+New versions may be adopted by downstream developers, but the choice to remain under the original version remains valid.
+
+
+13. CONTACT
+
+For inquiries, permissions, or questions, contact the maintainers via GitHub or appropriate public channels.
+
+
+
+END OF TERMS AND CONDITIONS
+
+
+The SeveriCraft Public License was created to protect both the freedom of users and the authorship of developers who contribute to open-source projects with care, creativity, and responsibility.
+
+By combining the transparency and adaptability of permissive licenses (such as the MIT License) with the strong user protections of copyleft licenses (like the GNU GPL v3), this license ensures that the work remains truly open and that its spirit is preserved over time.
+
+This license is more than just a legal framework — it’s a declaration of principles:
+- collaboration over control,
+- community over profit,
+- and transparency over opacity.
+
+Use it. Modify it. Share it.
+But always respect the work behind it.
+
+                    — Gianlu1107 & Gecko129
