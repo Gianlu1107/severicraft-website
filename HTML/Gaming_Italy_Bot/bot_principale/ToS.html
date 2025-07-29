@@ -75,12 +75,12 @@
             <h1>SeveriCraft</h1>
         </div>
         <div class="nav-list flex nav-list-centered" style="justify-content: center; align-items: center; width: 100%;">
-            <a class="nav-item-1" href="../../HTML/Index.html"><span>Home</span></a>
-            <a class="nav-item-3" href="../../HTML/Rules.html"><span>Regole</span></a>
+            <a class="nav-item-1" href="../../../HTML/Index.html"><span>Home</span></a>
+            <a class="nav-item-3" href="../../../HTML/Rules.html"><span>Regole</span></a>
             <a class="nav-item-5" href="https://vote.severicraft.it"><span>Vota</span></a>
         </div>
         <div class="flex">
-            <a href="../../HTML/Login.html" class="nav-btn btn-login flex">
+            <a href="../../../HTML/Login.html" class="nav-btn btn-login flex">
                 <img src="../../../Images/login.webp" alt="Icona Login" width="20px" height="20px">
                 <span>Accedi</span>
             </a>
@@ -101,61 +101,91 @@
             </div>
         </div>
         <div class="nav-mobile-menu flex" style="flex-direction: column; align-items: center; justify-content: center;">
-            <a href="../../HTML/Index.html"><span>Home</span></a>
-            <a href="../../HTML/Rules.html"><span>Regole</span></a>
+            <a href="../../../HTML/Index.html"><span>Home</span></a>
+            <a href="../../../HTML/Rules.html"><span>Regole</span></a>
             <a href="https://vote.severicraft.it"><span>Vota</span></a>
-            <a id="mobile-login-btn" href="../../HTML/Login.html" class="btn-mobile-auth" style="text-align:center;"><span>Accedi</span></a>
+            <a id="mobile-login-btn" href="../../../HTML/Login.html" class="btn-mobile-auth" style="text-align:center;"><span>Accedi</span></a>
             <button id="mobile-profile-btn" class="btn-profile" style="display: none; text-align:center;"><span>Profilo</span></button>
         </div>
     </section>
-    <main>
-      <section class="legal">
-        <h1>Termini di Servizio – Gaming Italy Bot</h1>
-        <p><strong>Ultimo aggiornamento:</strong> 29 luglio 2025</p>
-        <hr />
-        
-        <h2>1. Descrizione del Servizio</h2>
-        <p>Gaming Italy è un bot Discord che fornisce funzionalità di moderazione automatica tramite modelli di intelligenza artificiale (inclusi modelli GPT e classificatori pre-addestrati), gestione dei giveaway, pubblicazione di annunci e altre utility legate alla community, incluso il monitoraggio dello stato di un server Minecraft associato.</p>
-        
-        <h2>2. Utilizzo Consentito</h2>
-        <p>Puoi utilizzare Gaming Italy solo per scopi leciti e in conformità con i presenti Termini. In particolare, l’utente si impegna a non:</p>
-        <ul>
-          <li>aggirare, disabilitare o interferire con le funzionalità di sicurezza o moderazione;</li>
-          <li>utilizzare il Bot per inviare spam, messaggi offensivi o contenuti vietati dai Termini di Servizio di Discord;</li>
-          <li>alterare il codice o tentare di interferire con il corretto funzionamento del Bot.</li>
-        </ul>
-        <p>L’accesso ad alcune funzionalità (es. invio annunci o creazione giveaway) è limitato a utenti con ruoli autorizzati all’interno del server Discord.</p>
-        
-        <h2>3. Moderazione Automatizzata</h2>
-        <p>Il Bot utilizza sistemi automatizzati basati su modelli di intelligenza artificiale per analizzare i messaggi inviati. In caso di rilevamento di contenuti inappropriati o tossici, il Bot potrà:</p>
-        <ul>
-          <li>cancellare il messaggio;</li>
-          <li>inviare un avviso (warn);</li>
-          <li>applicare timeout temporanei o mute automatici;</li>
-          <li>segnalare l’evento nel canale di moderazione.</li>
-        </ul>
-        <p>Tali misure vengono adottate per proteggere l’ambiente della community. Tuttavia, l’utente comprende che la moderazione automatizzata può non essere infallibile e accetta la possibilità di falsi positivi o falsi negativi.</p>
-        
-        <h2>4. Gestione dei Giveaway</h2>
-        <p>Il Bot consente la creazione di giveaway a tempo determinato, con partecipazione tramite pulsanti interattivi. Al termine del giveaway, il vincitore viene scelto casualmente tra i partecipanti registrati. L’organizzazione e la validità dei premi sono responsabilità esclusiva degli amministratori del server.</p>
-        
-        <h2>5. Limitazione di Responsabilità</h2>
-        <p>Gaming Italy viene fornito “così com’è”, senza garanzie di disponibilità, sicurezza o accuratezza dei contenuti moderati o dei dati generati. Gli sviluppatori del Bot non sono responsabili per:</p>
-        <ul>
-          <li>eventuali danni diretti o indiretti derivanti dal suo utilizzo;</li>
-          <li>contenuti pubblicati dagli utenti;</li>
-          <li>eventuali malfunzionamenti o errori nel sistema di automoderazione o di giveaway.</li>
-        </ul>
-        
-        <h2>6. Modifiche al Servizio o ai Termini</h2>
-        <p>Gli sviluppatori si riservano il diritto di modificare, sospendere o interrompere in qualsiasi momento il servizio del Bot o i presenti Termini. Eventuali modifiche verranno comunicate nei canali ufficiali del server o del Bot.</p>
-        
-        <h2>7. Giurisdizione e Legge Applicabile</h2>
-        <p>Questi Termini sono regolati dalle leggi italiane. Qualsiasi controversia sarà sottoposta alla competenza esclusiva del Foro di [specificare città, es. Milano].</p>
-        
-        <h2>8. Contatti</h2>
-        <p>Per richieste, segnalazioni o supporto, contattare un amministratore del server Discord in cui è attivo il Bot, oppure scrivere al maintainer tramite i contatti ufficiali indicati nella documentazione del Bot.</p>
-      </section>
+    <!-- Main content -->
+    <main class="main">
+        <div class="rules-title">
+            <h1>Termini di Servizio – Gaming Italy Bot</h1>
+            <span>Ultimo aggiornamento: 29 luglio 2025</span>
+        </div>
+
+        <div class="rules-content">
+            <p>Benvenuto nei Termini di Servizio del bot Gaming Italy (“il Bot”). Questi termini regolano l’utilizzo del Bot all’interno dei server Discord nei quali è presente. L’uso del Bot implica l’accettazione piena e incondizionata dei presenti Termini.</p>
+        </div>
+
+        <div class="rules-content">
+            <h2>1. Descrizione del Servizio</h2>
+            <p>Gaming Italy è un bot Discord che fornisce funzionalità di moderazione automatica tramite modelli di intelligenza artificiale (inclusi modelli GPT e classificatori pre-addestrati), gestione dei giveaway, pubblicazione di annunci e altre utility legate alla community, incluso il monitoraggio dello stato di un server Minecraft associato.</p>
+        </div>
+
+        <div class="rules-content">
+            <h2>2. Utilizzo Consentito</h2>
+            <p>Puoi utilizzare Gaming Italy solo per scopi leciti e in conformità con i presenti Termini. In particolare, l’utente si impegna a non:</p>
+            <ul>
+                <li>aggirare, disabilitare o interferire con le funzionalità di sicurezza o moderazione;</li>
+                <li>utilizzare il Bot per inviare spam, messaggi offensivi o contenuti vietati dai Termini di Servizio di Discord;</li>
+                <li>alterare il codice o tentare di interferire con il corretto funzionamento del Bot.</li>
+            </ul>
+            <p>L’accesso ad alcune funzionalità (es. invio annunci o creazione giveaway) è limitato a utenti con ruoli autorizzati all’interno del server Discord.</p>
+        </div>
+
+        <div class="rules-content">
+            <h2>3. Moderazione Automatizzata</h2>
+            <p>Il Bot utilizza sistemi automatizzati basati su modelli di intelligenza artificiale per analizzare i messaggi inviati. In caso di rilevamento di contenuti inappropriati o tossici, il Bot potrà:</p>
+            <ul>
+                <li>cancellare il messaggio;</li>
+                <li>inviare un avviso (warn);</li>
+                <li>applicare timeout temporanei o mute automatici;</li>
+                <li>segnalare l’evento nel canale di moderazione.</li>
+            </ul>
+            <p>Tali misure vengono adottate per proteggere l’ambiente della community. Tuttavia, l’utente comprende che la moderazione automatizzata può non essere infallibile e accetta la possibilità di falsi positivi o falsi negativi.</p>
+        </div>
+
+        <div class="rules-content">
+            <h2>4. Gestione dei Giveaway</h2>
+            <p>Il Bot consente la creazione di giveaway a tempo determinato, con partecipazione tramite pulsanti interattivi. Al termine del giveaway, il vincitore viene scelto casualmente tra i partecipanti registrati. L’organizzazione e la validità dei premi sono responsabilità esclusiva degli amministratori del server.</p>
+        </div>
+
+        <div class="rules-content">
+            <h2>5. Limitazione di Responsabilità</h2>
+            <p>Gaming Italy viene fornito “così com’è”, senza garanzie di disponibilità, sicurezza o accuratezza dei contenuti moderati o dei dati generati. Gli sviluppatori del Bot non sono responsabili per:</p>
+            <ul>
+                <li>eventuali danni diretti o indiretti derivanti dal suo utilizzo;</li>
+                <li>contenuti pubblicati dagli utenti;</li>
+                <li>eventuali malfunzionamenti o errori nel sistema di automoderazione o di giveaway.</li>
+            </ul>
+        </div>
+
+        <div class="rules-content">
+            <h2>6. Modifiche al Servizio o ai Termini</h2>
+            <p>Gli sviluppatori si riservano il diritto di modificare, sospendere o interrompere in qualsiasi momento il servizio del Bot o i presenti Termini. Eventuali modifiche verranno comunicate nei canali ufficiali del server o del Bot.</p>
+        </div>
+
+        <div class="rules-content">
+            <h2>7. Giurisdizione e Legge Applicabile</h2>
+            <p>Questi Termini sono regolati dalle leggi italiane. Qualsiasi controversia sarà sottoposta alla competenza esclusiva del Foro di Padova.</p>
+        </div>
+
+        <div class="rules-content">
+            <h2>8. Contatti</h2>
+            <p>Per richieste, segnalazioni o supporto, contattare un amministratore del server Discord in cui è attivo il Bot, oppure scrivere a:</p>
+            <ul>
+                <li>
+                    <strong>✉️</strong>
+                    <a href="mailto:legal@severicraft.it">legal@severicraft.it</a>
+                </li>
+                <li>
+                    <strong>🌐</strong>
+                    <a href="https://severicraft.it" target="_blank" rel="noopener noreferrer">severicraft.it</a>
+                </li>
+            </ul>
+        </div>
     </main>
     <!-- Footer -->
     <footer class="footer">
@@ -164,10 +194,10 @@
                 <span class="sp-1">©2025 SeveriCraft | Tutti i diritti riservati.</span>
                 <span class="sp-2">Minecraft è un marchio di Mojang e SeveriCraft non è affiliato o approvato da Mojang.</span>
                 <div class="footer-links">
-                    <a href="/HTML/TOS.html">Termini</a> |
-                    <a href="/HTML/Privacy.html">Privacy</a> |
-                    <a href="/HTML/Cookie.html">Cookie</a> |
-                    <a href="/HTML/Contatti.html">Contatti</a>
+                    <a href="../../../HTML/TOS.html">Termini</a> |
+                    <a href="../../../HTML/Privacy.html">Privacy</a> |
+                    <a href="../../../HTML/Cookie.html">Cookie</a> |
+                    <a href="../../../HTML/Contatti.html">Contatti</a>
                 </div>
             </div>
             <div class="footer-socials">
