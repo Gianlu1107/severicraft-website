@@ -95,7 +95,7 @@
         if (!loginBtn) return;
 
         if (token) {
-            // Nascondi il pulsante di login
+            // Hide login button
             loginBtn.style.display = 'none';
             if (mobileLoginBtn) mobileLoginBtn.style.display = 'none';
             if (mobileProfileBtn) mobileProfileBtn.style.display = 'inline-block';
@@ -103,13 +103,10 @@
             const payload = getJwtPayload(token);
             const email = payload.email || '';
             const minecraft_nick = payload.minecraft_nick || '';
-
-            // Controlla se il pulsante Profilo esiste già
-            if (!document.querySelector('.btn-profile')) {
-                const parent = loginBtn.parentNode;
-                const profileBtn = createProfileButton(email, minecraft_nick);
-                parent.appendChild(profileBtn);
-            }
+            // Insert profile button
+            const parent = loginBtn.parentNode;
+            const profileBtn = createProfileButton(email, minecraft_nick);
+            parent.appendChild(profileBtn);
 
             if (mobileProfileBtn) {
                 mobileProfileBtn.onclick = function(e) {
@@ -125,7 +122,7 @@
             loginBtn.style.display = '';
             if (mobileLoginBtn) mobileLoginBtn.style.display = 'inline-block';
             if (mobileProfileBtn) mobileProfileBtn.style.display = 'none';
-            // Rimuovi il pulsante Profilo se esiste
+            // Remove profile button if exists
             const profileBtn = document.querySelector('.btn-profile');
             if (profileBtn) profileBtn.remove();
             const popup = document.getElementById('profile-popup');
