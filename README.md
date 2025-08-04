@@ -60,7 +60,7 @@ The work was evenly split between **Gianlu1107** and **Gecko129**, carefully han
 ## License
 
 Released under the **MIT** license — do whatever you want with it, just remember to give credit if you use or modify it.  
-Originally based on a project by [HenryDM](https://github.com/HenryDM), then completely rewritten, cleaned up and expanded by **Gianlu1107** and **Gecko129**.
+Originally based on a project by [Henry Thierry](https://github.com/henrythierrydev), then completely rewritten, cleaned up and expanded by **Gianlu1107** and **Gecko129**.
 
 ---
 
